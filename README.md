@@ -36,4 +36,9 @@ Private local work context belongs in the optional, ignored `AGENTS.local.md` fi
 
 Small, reproducible experiments and corrections to platform guidance are welcome. Describe the board variant, operating system, framework/library versions, actual hardware test performed, and recovery procedure where relevant. Clearly label untested suggestions.
 
-Upstream examples and dependencies belong to their respective authors; link to them instead of copying their source or binaries without reviewing licenses. A project license for original code has **not yet been selected**.
+Upstream examples and dependencies belong to their respective authors; link to them instead of copying their source or binaries without reviewing licenses.
+
+## License
+
+Original code and documentation in this repository are licensed under the [Apache License, Version 2.0](LICENSE), unless otherwise noted. Third-party libraries, examples, firmware, and other materials retain their respective licenses; this project's Apache-2.0 license does not relicense them.
+
