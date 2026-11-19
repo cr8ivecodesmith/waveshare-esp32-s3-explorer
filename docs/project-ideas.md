@@ -1,49 +1,43 @@
 # Project ideas
 
-Pick whatever sounds interesting. These are invitations, **not assignments**, and they are not implemented examples in this repository.
+Start small, then add features as you discover what the board can do.
 
-A small success can be as simple as changing a label on screen or playing a sound in response to a button press.
+## Quick experiments
 
-## First modifications
-
-| Idea | Uses | Possible starting point |
+| Idea | Uses | Starting point |
 | --- | --- | --- |
 | Personal badge or greeting | Display | Waveshare `04_gfx_helloworld` |
 | Wi-Fi signal explorer | Wi-Fi, display | Waveshare `05_esp_wifi_analyzer` |
-| Tilt readings on screen | Motion sensor, display | Waveshare `03_qmi8658_example` plus a display example |
-| Physical-button counter | Buttons, display | Waveshare `02_button_example` plus a display example |
+| Tilt readings on screen | Motion sensor, display | Waveshare `03_qmi8658_example` and a display example |
+| Button counter | Buttons, display | Waveshare `02_button_example` and a display example |
 
-The starting-point names refer to **manufacturer examples**, not files provided by this repository.
+The starting points above are in [Waveshare's Arduino example package](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino).
 
-## Playful standalone projects
+## Playful projects
 
-| Idea | Uses | First achievable version |
+| Idea | Uses | First version |
 | --- | --- | --- |
-| Magic 8-Ball or shake-to-roll dice | Motion, display | Shake detection and one random answer |
-| Focus timer | Display, touch, speaker | Countdown plus a simple alert |
-| Reaction-time game | Display, touch | Tap after a signal and show elapsed time |
-| Tiny virtual pet | Display, touch, motion | Three facial expressions and one interaction |
-| Tilt maze | Motion, display | Move a dot or ball around the screen |
-| Sound visualizer | Microphones, display | One changing bar or meter |
+| Magic 8-Ball or shake-to-roll dice | Motion, display | Shake the board to show a random answer |
+| Focus timer | Display, touch, speaker | Countdown with an alert |
+| Reaction-time game | Display, touch | Tap after a signal; show elapsed time |
+| Tiny virtual pet | Display, touch, motion | A character with a few expressions |
+| Tilt maze | Motion, display | Move a ball by tilting the board |
+| Sound visualizer | Microphones, display | A simple audio-level meter |
 
-## Connected and ambitious projects
+## Connected projects
 
-| Idea | Uses | Added considerations |
+| Idea | Uses | First version |
 | --- | --- | --- |
-| Weather or API dashboard | Wi-Fi, display | Choose an available API; avoid exposing secrets in firmware |
-| Computer status screen | Wi-Fi, display | Companion application or local API |
-| BLE controller | Bluetooth LE, buttons/touch | Compatible receiver and protocol |
-| Voice-controlled companion | Microphones, speaker, display | Audio handling; offline command recognition or external services |
-| Conversational desk character | Audio, display, Wi-Fi | External AI service and credential handling |
+| Weather dashboard | Wi-Fi, display | Display weather data from an API |
+| Computer status screen | Wi-Fi, display | Show readings from a companion app |
+| BLE controller | Bluetooth LE, buttons/touch | Send a command to another device |
+| Voice-controlled companion | Microphones, speaker, display | Recognize a few commands |
+| Conversational desk character | Audio, display, Wi-Fi | Connect to an external AI service |
 
-A microSD card may help for larger media assets and recordings but is not required for the basic display, motion, touch, or Wi-Fi ideas.
+A microSD card can be useful for larger media files, but most of these projects don't need one.
 
-## If you're using a coding assistant
+## Working with a coding assistant
 
-Give it the **exact board model**, a link to [Waveshare's documentation](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54), and a small desired behavior. Ask it to identify which existing manufacturer example is the closest starting point, explain what it will change, and propose a way to verify the result. Inspect the changes before flashing.
+Share the [board documentation](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54), describe the behavior you want, and ask the assistant to find the closest existing example. Review the changes and test them on the device.
 
-You can also start without AI, or use it only to help understand unfamiliar code.
-
-## Share a discovery
-
-An interesting result can be a working application, a failed experiment with an explanation, or an improved setup instruction. When contributing, distinguish **tried on hardware** from **not yet tested**.
+Whether a project works immediately or takes some debugging, write down what you learn.

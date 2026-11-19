@@ -1,11 +1,12 @@
-# Linux / Ubuntu development environment
+# Linux / Ubuntu setup
 
-> **Status:** Preliminary guidance based on vendor documentation; not yet validated on project hardware.
+1. Install [Arduino IDE](https://www.arduino.cc/en/software) and ESP32 board support following [Waveshare's Arduino guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino).
+2. Install the libraries required by the example, using Waveshare's documented versions.
+3. Connect the board using a data-capable USB-C cable. Check which serial device appears (often `/dev/ttyACM*`).
+4. If the serial device is present but cannot be opened, inspect its permissions with `ls -l` and check whether your user belongs to the required group (often `dialout`).
+5. Select **ESP32S3 Dev Module**, **16 MB flash**, the example's partition settings, and the serial port.
+6. Build and upload `04_gfx_helloworld`. Confirm the display output.
 
-1. Install [Arduino IDE](https://www.arduino.cc/en/software) and the Espressif board support described in [Waveshare's Arduino guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino). Start with the vendor's documented dependencies.
-2. Connect the board with a **data-capable USB-C cable** and compare attached serial devices before and after connecting. Depending on how the firmware exposes USB, a port may appear as `/dev/ttyACM*` or another serial device.
-3. If the port is present but cannot be opened, inspect device ownership and permissions (`ls -l /dev/ttyACM*` if applicable). Some distributions use the `dialout` group; verify the actual group rather than applying an unexamined system-wide fix.
-4. Select **ESP32S3 Dev Module**, the correct port, and **16 MB flash**, then build and upload `04_gfx_helloworld`.
-5. If the port is not recognized, consult [Waveshare's BOOT-mode instructions](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use).
+For connection or download-mode problems, see [Waveshare's instructions](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use).
 
-See [getting started](../getting-started.md). Native Linux flashing is the straightforward first route; do not assume a container or special AI environment is required.
+Continue with [Getting started](../getting-started.md).

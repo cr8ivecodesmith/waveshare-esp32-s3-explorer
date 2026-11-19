@@ -1,39 +1,32 @@
 # Waveshare ESP32-S3 Explorer
 
-A small, open-ended playground for the [Waveshare ESP32-S3-Touch-LCD-1.54](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54). Start with a working example, change something you can see or hear, and explore what this pocket-sized device can do.
+A collection of small projects and experiments for the [Waveshare ESP32-S3-Touch-LCD-1.54](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54). Start with a working example, make a change, and see where curiosity takes you.
 
-The project began as an invitation for people with different programming backgrounds to try hardware projects. Anyone can use the materials, with or without an AI coding assistant. There is no prescribed challenge or requirement to complete anything.
+The board has a touchscreen, motion sensor, microphones, speaker, Wi-Fi, and Bluetooth LE—plenty to explore without extra components.
 
-## Hardware
+## Getting started
 
-The **touchscreen variant** combines a 240 × 240 LCD, capacitive touch, Wi-Fi, Bluetooth LE, microphones, speaker, motion sensor, and buttons. A microSD card is optional for basic experimentation. Confirm details against [Waveshare's board documentation](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54); examples for similarly named *non-touch* boards are not interchangeable.
+1. [Set up the development environment](docs/getting-started.md) on macOS, Linux, or Windows.
+2. Build and flash Waveshare's `04_gfx_helloworld` example.
+3. Change something visible on the display.
+4. Explore the [project ideas](docs/project-ideas.md), or come up with your own.
 
-## Start here
+The starter guide uses Arduino examples. [ESP-IDF](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/ESP-IDF) is another option.
 
-1. Read the [getting-started guide](docs/getting-started.md) and the [official user guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use).
-2. Choose your [development environment](docs/development/) (macOS, Linux, or Windows).
-3. Reproduce Waveshare's `04_gfx_helloworld` example, then modify one visible detail.
-4. Browse the [project ideas](docs/project-ideas.md) or invent your own.
+## Explore
 
-Waveshare supports both [Arduino](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino) and [ESP-IDF](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/ESP-IDF). Arduino examples are the suggested first route, not a required framework.
+Small projects can go a long way: a shake-to-roll dice app, a focus timer, a virtual pet, a tilt-controlled game, a Wi-Fi dashboard, or a voice-controlled companion.
 
-## What is here today?
+See the [project ideas](docs/project-ideas.md) for more possibilities. The [examples directory](examples/) will hold working projects as they're developed and tested.
 
-**Early documentation scaffold only.** No original firmware example, reproducible automated build, or tested cross-platform flash workflow has been added to this repository yet. The first hardware-validation task is to reproduce a vendor example, record its dependencies, then publish a minimal working example.
+## AI-assisted development
 
-- [Getting started](docs/getting-started.md)
-- [Development environments](docs/development/)
-- [Project inspiration](docs/project-ideas.md)
-- [Example status](examples/README.md)
-
-## AI assistance is optional
-
-Use any coding assistant, or none. The repository includes portable [agent guidance](AGENTS.md), but does **not** require OpenCode, Codex, or another harness. If you use an agent, have it read the board's official documentation, explain the example you chose, and verify every board-specific assumption before flashing.
-
-Private local work context belongs in the optional, ignored `AGENTS.local.md` file. See [the example](AGENTS.local.example.md). Never publish personal or internal infrastructure URLs, secrets, or workplace-specific data here.
+Use any coding assistant you like, or work directly with the examples. The repository includes [project guidance for coding agents](AGENTS.md) and an [optional local-context template](AGENTS.local.example.md).
 
 ## Contributing
 
-Small, reproducible experiments and corrections to platform guidance are welcome. Describe the board variant, operating system, framework/library versions, actual hardware test performed, and recovery procedure where relevant. Clearly label untested suggestions.
+Experiments, corrections, and setup notes are welcome. For hardware examples, include the board variant, toolchain versions, and what you tested.
 
-Upstream examples and dependencies belong to their respective authors; link to them instead of copying their source or binaries without reviewing licenses. A project license for original code has **not yet been selected**.
+## License
+
+[Apache License 2.0](LICENSE)

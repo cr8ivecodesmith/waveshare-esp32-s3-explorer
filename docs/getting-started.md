@@ -1,55 +1,51 @@
 # Getting started
 
-**Goal:** Make one visible change on the Waveshare ESP32-S3-Touch-LCD-1.54. This guide is a first path, not a required course.
+Start by flashing a working display example, then change something you can see.
 
-> **Status:** Documentation-level starting point. The commands, dependencies, and flashing sequence have not yet been validated on the six physical devices associated with this project. Follow the official guidance if anything here differs.
+These steps follow [Waveshare's Arduino guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino); platform-specific details are still being tested.
 
-## 1. Identify and inspect the board
+## 1. Check your board
 
-Check that yours is the **ESP32-S3-Touch-LCD-1.54** (with touch), not the otherwise similarly named LCD-only variant.
+Use the **ESP32-S3-Touch-LCD-1.54** touchscreen model. The similarly named LCD-only board uses different examples.
 
-- [Hardware overview](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54)
-- [Official user guide and assembly precautions](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use)
-- [Firmware resources](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Resources-And-Documents)
+- [Board overview](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54)
+- [Assembly and usage instructions](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use)
+- [Firmware downloads](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Resources-And-Documents)
 
-If your kit includes a battery that needs installation, follow Waveshare's assembly instructions and use the provided insulating sheet. Use a **data-capable USB-C cable** for programming. A microSD card is not necessary for the first display example.
+If installing the included battery, use the insulating sheet as directed by Waveshare. Have a **data-capable USB-C cable** ready. You don't need a microSD card for the display example.
 
-Before flashing anything, inspect the factory application and locate Waveshare's factory firmware and restoration instructions. Flashing a sketch will replace the application currently on the device.
+Explore the factory application before uploading a sketch: flashing replaces the currently installed application. Save the factory firmware download and recovery instructions for later.
 
-## 2. Prepare a development environment
+## 2. Set up your computer
 
-Select the notes for your operating system:
+Choose your operating system:
 
 - [macOS](development/macos.md)
 - [Linux / Ubuntu](development/linux.md)
 - [Windows](development/windows.md)
 
-Waveshare documents two programming routes: [Arduino](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino) and [ESP-IDF](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/ESP-IDF). The initial path below uses **Arduino** because it has a small display-oriented example. You can choose a different toolchain.
+Arduino is the starting route here; you can also develop with [ESP-IDF](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/ESP-IDF).
 
-## 3. Reproduce a manufacturer's example
+## 3. Build and flash Hello World
 
-In [Waveshare's Arduino guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino):
+Follow the [manufacturer's Arduino setup](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Arduino):
 
-1. Install Arduino IDE and the Espressif ESP32 board support as directed. Waveshare currently documents the **ESP32 by Espressif Systems 3.2.0** package for these examples.
-2. Obtain the **ESP32-S3-Touch-LCD-1.54** example package and its required libraries. Use the vendor-documented versions first rather than replacing all dependencies with the newest ones.
-3. In Arduino IDE, select **ESP32S3 Dev Module**, the connected USB port, and **16 MB flash**. Choose the partition layout required by the example.
-4. Open the vendor example named **`04_gfx_helloworld`** (under `Arduino/examples`), build it, and upload it using the manufacturer's instructions.
-5. Confirm that the screen displays the expected output. Record your OS, tool versions, USB port, compile/upload results, and any workaround needed.
+1. Install Arduino IDE and ESP32 board support. Start with the vendor-documented **ESP32 by Espressif Systems 3.2.0** package.
+2. Download the board's Arduino example package and required libraries, using the documented versions.
+3. Select **ESP32S3 Dev Module**, **16 MB flash**, the correct partition scheme for the example, and your board's USB port.
+4. Open `Arduino/examples/04_gfx_helloworld`, compile, and upload.
+5. Confirm the result on the screen.
 
-If the USB port is missing, Waveshare documents holding **BOOT** while connecting USB, then releasing it to enter download mode. After uploading, power-cycle the board. Do not erase flash just to troubleshoot a missing port.
+If the port doesn't appear, follow Waveshare's BOOT/download-mode instructions. A fresh USB connection or power cycle may be needed after uploading.
 
-## 4. Make a small modification
+## 4. Change one thing
 
-Change one clearly visible detail: text, positioning, foreground color, or background color. Rebuild and reflash; compare actual behavior with your expectation.
+Edit the displayed text, color, or position. Rebuild and upload, then check whether the result matches your expectation.
 
-Before experimenting with more peripherals, try explaining the example's setup and draw calls in your own words (or ask a coding assistant to walk through them).
+Want to understand how it works? Trace the initialization and drawing calls, or ask a coding assistant to explain them.
 
-## 5. Explore further
+## What's next?
 
-Browse [project ideas](project-ideas.md) for motion-, touch-, audio-, and Wi-Fi-based directions. Some ideas are purely proposed; do not assume a completed example exists in this repository.
+Try a [project idea](project-ideas.md), or build on another official example.
 
-## Troubleshooting and recovery
-
-Use [Waveshare's user guide](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use) for bootloader behavior and vendor firmware restoration. Confirm you have the correct firmware image **and flash address** for your exact model before restoring. Current project maintainers have not verified a cross-platform recovery workflow; document successful recoveries when available.
-
-For help, report your board model, OS, toolchain/version, USB port (without private machine identifiers), sample name, error, and what you already tried.
+For firmware recovery, use [Waveshare's instructions](https://docs.waveshare.com/ESP32-S3-Touch-LCD-1.54/Instructions-For-Use) and the firmware image and flash address for your exact model. If you run into trouble, note your OS, board model, tool versions, example name, and error message.

@@ -1,23 +1,18 @@
-# Optional local agent context (example)
+# Local project context
 
-Copy this file to `AGENTS.local.md` only if you want additional instructions on your own machine. The copied file is ignored by Git. Some coding assistants may need you to open or explicitly reference it; there is no harness-specific loader in this repository.
+Copy this file to `AGENTS.local.md` to add instructions for your own development environment. The local file is ignored by Git. Ask your coding assistant to read it if needed.
 
-Keep this template generic in the public repository. Replace placeholders **only in the ignored local copy**.
+## Development environment
 
-## Personal development environment
+- Operating system: <OS and version>
+- Preferred toolchain: <Arduino, ESP-IDF, or other>
+- Board connection: <USB port or relevant notes>
 
-- Operating system: <your OS and version>
-- Preferred toolchain: <Arduino / ESP-IDF / other>
-- Local project working directory: <path, optional>
-- Board and connection notes: <your observed USB port and board revision, if relevant>
+## Project coordination (optional)
 
-## Optional coordination
+- Canonical repository: <repository reference>
+- Issue tracker: <project tracker>
+- Knowledge base: <notes or wiki>
+- Review workflow: <branch and review conventions>
 
-- Canonical repository: <your local or remote repository reference>
-- Issue tracker: <your project tracker, if any>
-- Knowledge notes: <your personal notes/wiki, if any>
-- Review workflow: <your branch/PR conventions>
-
-## Safeguards
-
-Do not place passwords, tokens, private keys, or credentials here: AI assistants may transmit their loaded context to a model provider. Keep private endpoints and hostnames out of public code, documentation, issues, and commits.
+Keep credentials out of this file, and don't publish its private contents.
